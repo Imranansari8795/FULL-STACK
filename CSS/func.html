@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Textbox Color with jQuery</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: blueviolet;
+        }
+
+        .text-box {
+            width: 30vw;
+            height: 40vh;
+            margin: 10px;
+            transition: background-color 2.3s;
+            border:5px solid black;
+            color: white;
+            border-radius: 15px;
+            font-size: 100px;
+            box-shadow: 20px 20px 20px rgba(242, 5, 5, 0.762);
+            text-decoration: none;
+            
+
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <input type="text" class="text-box" id="textbox1">
+    <input type="text" class="text-box" id="textbox2">
+
+    <script>
+        $(document).ready(function() {
+            $('#textbox1').on('input', function() {
+                var value = $(this).val();
+                $(this).css('background-color', getColor(value));
+            });
+
+            $('#textbox2').on('input', function() {
+                var value = $(this).val();
+                $(this).css('background-color', getColor(value));
+            });
+
+            function getColor(text) {
+                // You can define your own logic here to determine the color based on the input text
+                // For this example, we'll change the color based on the length of the text.
+                if(text.length == 0)
+                {
+                    return 'white';
+                }
+                else if (text.length < 5) {
+                    return 'red';
+                } else if (text.length < 10) {
+                    return 'yellow';
+                } else {
+                    return 'green';
+                }
+               
+            }
+        });
+    </script>
+</body>
+</html>

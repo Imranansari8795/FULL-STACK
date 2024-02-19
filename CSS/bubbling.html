@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form, div, p {
+            padding: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            background-color: #3498db;
+            color: white;
+            margin: 10px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        form:hover, div:hover, p:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container" onclick="handleClick(event)">
+        <form>FORM</form>
+        <div>DIV</div>
+        <p>P</p>
+    </div>
+
+    <script>
+        function handleClick(event) {
+            var clickedElement = event.target;
+            var elementName = clickedElement.tagName.toLowerCase();
+            alert(elementName);
+        }
+    </script>
+</body>
+</html>

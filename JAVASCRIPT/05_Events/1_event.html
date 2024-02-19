@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Events</title>
+    <style>
+        ul{
+            list-style-type: none;
+        }
+        #google{
+            color: white;
+        }
+    </style>
+</head>
+<body style="background-color:#414141;color: aliceblue;">
+    <h2>Amazing image</h2>
+    <ul id="images">
+        <li id="cat"><img src="/HTML/cat.jpg" alt=""></li>
+        <li id="river"><img src="/HTML/image2.jpeg" alt=""></li>
+        <li id="taj"><img src="/CSS/image3.jpeg" alt=""></li>
+        <li id="girl"><img src="/CSS/image4.jpeg" alt=""></li>
+        <li id="link"><a href="https://google.com" id="google">Google</a></li>
+    </ul>
+</body>
+<script>
+    // document.getElementById('cat').onclick = function(){
+    //     alert("cat clicked");
+    // };
+
+    // document.getElementById("images").addEventListener('click',function(e){
+    //     console.log("clicked inside the ul");
+    // },false)
+
+    // document.getElementById('cat').addEventListener('click',function(e){
+    //     console.log("cat is clicked");
+    //     e.stopPropagation();
+    // },true)
+
+    document.getElementById('google').addEventListener('click',function(e){
+        // console.log('google clicked');
+        e.preventDefault();
+        e.stopPropagation();
+    },false)
+    document.querySelector('#images').addEventListener('click',function(e){
+        // console.log(e);
+        // console.log(e.target);
+
+        // console.log(e.target.tagName);
+
+        if(e.target.tagName ==='IMG'){
+
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+        }
+        
+        // console.log(removeIt);
+        // removeIt.parentNode.removeChild(removeIt);
+    })
+
+</script>
+</html>

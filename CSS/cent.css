@@ -1,0 +1,26 @@
+#outer{
+    height: 400px;
+    width: 400px;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(cat.jpg);
+    background-size: cover;
+    
+    
+}
+#inner{
+    height: 200px;
+    width: 200px;
+    
+    
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px;
+    background-image: url(cat.jpg);
+    background-repeat: none;
+}

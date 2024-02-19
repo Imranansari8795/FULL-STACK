@@ -1,0 +1,26 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+}
+
+input{
+height: 100px;
+width: 200px;
+font-size: 50px;
+text-align: center;
+margin-right: 20px;
+/* border: red; */
+border-radius: 20px;
+}
+
+.red-bg{
+    background-color: red;
+}
+.green-bg{
+    background-color: green;
+}
+
+
+

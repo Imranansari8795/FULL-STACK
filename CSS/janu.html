@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Box with Max Length</title>
+</head>
+<body>
+    <label for="text-input">Enter text (max 10 characters):</label>
+    <input type="text" id="text-input" maxlength="10">
+    <p>Remaining characters: <span id="char-count">10</span></p>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+<script>
+    $(document).ready(function() {
+    // Get references to the input element and character count span
+    var $textInput = $("#text-input");
+    var $charCount = $("#char-count");
+
+    // Update character count on input
+    $textInput.on("input", function() {
+        var currentLength = $textInput.val().length;
+        var maxLength = $textInput.attr("maxlength");
+        var remainingChars = maxLength - currentLength;
+        $charCount.text(remainingChars);
+    });
+});
+
+
+</script>
+</html>

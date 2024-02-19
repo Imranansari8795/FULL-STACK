@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(thata.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#bahar
+{
+    width: 70vw;
+    height: 70vh;
+    background-color: rgb(188, 188, 238);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+    border-radius: 20px;
+
+}

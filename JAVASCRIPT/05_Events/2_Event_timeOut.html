@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timeout funtion</title>
+
+</head>
+
+<body>
+    <h1>chai aur JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">stop</button>
+
+</body>
+<script>
+    // const sayImran = function(){
+    //     console.log("imran ansari");
+    // }
+    // // setTimeout(sayImran,2000)
+    // const changeText = function(){
+    //     document.querySelector('h1').innerText = "Best jS series on youTube";
+    // }
+    //     const changeMe = setTimeout(changeText,2000);
+
+    //     document.querySelector('#stop').addEventListener('click',function(e){
+    //     clearTimeout(changeMe);
+    //     console.log("STOPPED");
+    // })
+
+
+
+
+
+
+        const sayDate = function(str) {
+        console.log(str, Date.now());
+        }
+            let intervalId;
+        document.querySelector("#start").addEventListener('click',function(){
+            intervalId = setInterval(sayDate,0,"Hello Dost");
+        });
+        document.querySelector('#stop').addEventListener('click',function(){
+                clearInterval(intervalId);
+
+        })
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slideshow</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <img name="slide">
+    <script>
+        var i = 0;
+        var images = ['image1.jpeg', 'image2.jpeg', 'image3.jpeg', 'image4.jpeg'];
+
+        function changeImage() {
+            document.slide.src = images[i];
+            i = (i + 1) % images.length;
+            setTimeout(changeImage, 2000); // Adjus.t the delay as desired
+        }
+        changeImage();
+    </script>
+</body>
+</html>
